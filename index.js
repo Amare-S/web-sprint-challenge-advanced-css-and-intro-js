@@ -246,8 +246,16 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
- 
- 
+ const artists= [];
+ for (let i = 0; i < array.length; i++ ){
+  let data = array[i].years.split(" ")
+  let birthYear = Number(data[0]);
+  let deathYear = Number(data[2]);
+  if(birthYear >= 1900 && deathYear < 2000){
+    artists.push( array[i].name );
+  }
+ }
+ return artists
 }
 
 
@@ -300,7 +308,13 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array){
-  return 
+  const artists= [];
+  for (let i = 0; i < array.length; i++ ){
+    if(art >= 100){
+      artists.push(array[i].paintings);
+    }
+  }
+  return artists
 }
 
 
